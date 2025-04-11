@@ -4,7 +4,7 @@ import brand_3 from "@/assets/brand_3.png";
 import brand_4 from "@/assets/brand_4.png";
 import brand_5 from "@/assets/brand_5.png";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 function Brands() {
   const images = [
     { img: brand_1 },
