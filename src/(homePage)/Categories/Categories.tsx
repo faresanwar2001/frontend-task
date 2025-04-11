@@ -12,7 +12,7 @@ function Categories() {
     { name: "Sports", productsCount: 20, icon: <Trophy /> },
     { name: "Electronics", productsCount: 30, icon: <Cable /> },
     { name: "Gifts", productsCount: 5, icon: <Gift /> },
-    { name: "Gifts", productsCount: 5, icon: <Gem /> },
+    { name: "jewelry", productsCount: 5, icon: <Gem /> },
   ];
 
   return (
