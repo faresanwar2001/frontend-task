@@ -86,10 +86,10 @@ function Header() {
   ];
 
   return (
-    <header className="flex py-5 container mx-auto justify-between items-center lg:px-0 px-7">
+    <header className="flex py-7 lg:mb-7 mb-3 container mx-auto justify-between items-center lg:px-0 px-7">
       {/* Logo */}
       <div>
-        <h1 className="text-pink-500 font-bold text-xl">MyHeader</h1>
+        <h1 className="text-pink-500 font-bold text-xl">OnlineShope</h1>
       </div>
 
       {/* Links */}
@@ -103,14 +103,14 @@ function Header() {
 
       {/* Search bar */}
       <div className="relative lg:flex hidden gap-3 justify-center items-center">
-          <Search className="h-6 w-6 absolute left-3 text-gray-500" />
+          <Search className="h-6 w-6 absolute left-3 text-gray-400" />
 
           {/* Input */}
           <input type="text" placeholder="Search..."  className="py-2 pl-10 rounded-xl border-2 border-pink-500 focus:outline-slate-800"/>
         </div>
 
       {/* Icons */}
-      <div className="flex gap-5">
+      <div className="flex gap-8">
         {/* Wishlist icon */}
         <button className="text-pink-500 relative lg:block hidden">
           <Heart className="h-6 w-6" />
@@ -124,7 +124,7 @@ function Header() {
           <Scale className="h-6 w-6" />
         </button>
 
-        <div className="">
+        <div>
       <DropdownMenu>
         {/* Trigger */}
         <DropdownMenuTrigger asChild>
@@ -136,8 +136,8 @@ function Header() {
         {/* Content */}
         <DropdownMenuContent className="bg-white text-[#F82BA9]">
           {countryOptions.map((country) => (
-            <DropdownMenuItem key={country.value} >
-              <div className="flex items-center gap-2">
+            <DropdownMenuItem key={country.value}>
+              <div className="flex items-center gap-2 ">
                 <span>{country.label}</span>
               </div>
             </DropdownMenuItem>
@@ -152,7 +152,7 @@ function Header() {
           <Menu className="h-6 w-6" />
         </button>
 
-        <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold transform transition-transform ${openMenu? "opacity-100" : "opacity-0"}`}
+        <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-4 font-semibold transform transition-transform ${openMenu? "opacity-100" : "opacity-0"}`}
         style={{transition:"transform 0.3s ease, opacity 0.3s ease"}}
         >
         {linksHeader.map((link, index) => (

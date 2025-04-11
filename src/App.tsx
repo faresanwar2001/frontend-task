@@ -1,4 +1,5 @@
-import { Brands } from "./(homePage)/Brands/Brands";
+import Brands from "./(homePage)/Brands/Brands";
+import { BrandsFilter } from "./(homePage)/BrandsFilter/BrandsFilter";
 import Categories from "./(homePage)/Categories/Categories";
 import { CategoryFilter } from "./(homePage)/CategoryFilter/CategoryFilter";
 import Products from "./(homePage)/Products/Products";
@@ -15,18 +16,21 @@ function App() {
       {/* Categories */}
       <Categories />
 
-      <div className="flex flex-col lg:flex-row container mx-auto gap-4 py-10">
+      <div className="lg:flex flex-col lg:flex-row container mx-auto lg:gap-x-10 gap-x-10 py-10">
         {/* Category filter */}
-        <div className="w-full lg:w-1/4">
+        <div className=" lg:w-[25%] lg:block hidden">
           <CategoryFilter />
-          <Brands/>
+          <BrandsFilter/>
         </div>
 
         {/* Products */}
-        <div className="w-full lg:w-3/4">
+        <div className="lg:w-full w-full ">
           <Products />
         </div>
       </div>
+
+      {/* Brands */}
+      <Brands/>
 
       {/* Footer */}
       <Footer />

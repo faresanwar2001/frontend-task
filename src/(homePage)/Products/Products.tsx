@@ -24,9 +24,9 @@ function Products() {
     },[])
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 container mx-auto">
 
-        {products?.map((product)=><div key={product?.id} className="lg:w-54 w-full px-7 lg:px-0">
+        {products?.map((product)=><div key={product?.id} className="lg:w-54 w-full mx-auto px-8 lg:px-0 mb-3">
             {/*  Building image*/}
             <img src={product.image} alt={product.title} className="w-full lg:h-54 h-54" />
 

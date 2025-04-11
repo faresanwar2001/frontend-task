@@ -22,19 +22,29 @@ export function CategoryFilter() {
       {/* Radio group */}
       <RadioGroup>
         {categories.map((category) => (
-           <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              {/* Radio group item */}
+              <RadioGroupItem
+                value="default"
+                id="r1"
+                className="text-gray-500"
+              />
 
-           {/* Radio group item */}
-           <RadioGroupItem value="default" id="r1" className="text-gray-500" />
+              {/* Label */}
+              <Label
+                htmlFor="r1"
+                className="font-normal text-[14px] text-gray-600"
+              >
+                {category.name}
+              </Label>
+            </div>
 
-           {/* Label */}
-           <Label htmlFor="r1" className="font-normal text-[14px] text-gray-600">{category.name}</Label>
-
-           {/* Product count */}
-           <span className="text-gray-600 text-sm">
-             ({category.productsCount})
-           </span>
-         </div>
+            {/* Product count */}
+            <span className="text-gray-600 text-sm mr-18">
+              ({category.productsCount})
+            </span>
+          </div>
         ))}
       </RadioGroup>
     </div>

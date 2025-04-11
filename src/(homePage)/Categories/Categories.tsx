@@ -1,4 +1,4 @@
-import { Trophy } from "lucide-react";
+import { Gem, Trophy } from "lucide-react";
 import { Cable } from "lucide-react";
 import { Shirt } from "lucide-react";
 import { BookText } from "lucide-react";
@@ -12,14 +12,14 @@ function Categories() {
     { name: "Sports", productsCount: 20, icon: <Trophy /> },
     { name: "Electronics", productsCount: 30, icon: <Cable /> },
     { name: "Gifts", productsCount: 5, icon: <Gift /> },
-    { name: "Gifts", productsCount: 5, icon: <Gift /> },
+    { name: "Gifts", productsCount: 5, icon: <Gem /> },
   ];
 
   return (
-    <div className="flex lg:flex-row flex-col px-7 lg:px-0 lg:gap-6 gap-4 mx-auto my-6 container overflow-hidden">
+    <div className="grid lg:grid-cols-6 grid-cols-2 px-7 lg:px-0 lg:gap-6 gap-4 mx-auto lg:my-6 my-4 container overflow-hidden">
       {categories?.map((category) => (
         <div key={category.name} className="basis-1/5">
-          <div className="bg-pink-200 py-4 rounded-[20px] flex items-center justify-evenly lg:w-full">
+          <div className="bg-pink-100 py-4 rounded-[20px] flex items-center justify-evenly lg:w-full">
             <div className="rounded-[45px] bg-pink-400 p-5 text-white">
               {/* Category icon */}
               {category.icon}
@@ -31,7 +31,7 @@ function Categories() {
               </h5>
 
               {/* Products count */}
-              <p className="text-slate-900 font-[400] text-[16px]">
+              <p className="text-gray-500 font-[400] text-[16px]">
                 {category?.productsCount} items
               </p>
             </div>
