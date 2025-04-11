@@ -4,7 +4,6 @@ import { Globe, Menu, Search } from "lucide-react";
 import { Heart } from "lucide-react";
 import { Scale } from "lucide-react";
 import { useState } from "react";
-import Select from "react-select";
 import Flag from "react-world-flags";
 
 function Header() {
